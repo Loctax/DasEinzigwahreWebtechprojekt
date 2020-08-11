@@ -5,16 +5,15 @@ body{
 h1 {
     color:ghostwhite;
     font-size: 3vw;
-    margin-left: 2.5vw;
     line-height: 20px;
 }
-#logreg{
-    font-size: 2vw;
-    position: fixed;
-    right: 3vw;
-    line-height:20px;
-    cursor:pointer;  
+
+h2 {
+  color:ghostwhite;
+  font-size: 1.5vw; 
+  line-height: 20px;
 }
+ 
 #loginBox{
     position: absolute;
   left: 50%;
@@ -29,6 +28,115 @@ h1 {
   transform: translate(-50%, -50%);
 
 }
-a:any-link{color:snow;}
+#Movie-Collage{
+  position:absolute;
+
+}
+a:any-link{color:snow;
+}
+
+.flex-containerIndex{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content: flex-end;
+
+
+}
+.flex-containerIndex > div{
+  margin-right: 50px;
+  width:100px;
+  text-align:center;
+  line-height: 75px;
+  font-size: 30px;
+  right: 3vw;
+}
+
+.b2{
+  margin-right: 200px;
+}
+
+.flex-containerLogin{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-containerLogin > div{
+  width:100px;
+  line-height: 75px;
+  font-size: 30px; 
+  height: 40px; 
+  align-self: auto;
+ 
+  margin: 0 auto;
+  top: 50%;
+  flex: 0 1 auto; 
+}
+
+.flex-containerPage{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content: flex-end;
+  
+  
+}
+
+.flex-containerPage > div{
+  margin-right: 50px;
+  width:100px;
+  text-align:center;
+  line-height: 75px;
+  font-size: 30px;
+  right: 3vw;
+  
+}
+.flex-containerAdd{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+ 
+ 
+  
+
+}
+
+.flex-containerAdd > div{
+  width:100px;
+  line-height: 75px;
+  font-size: 30px; 
+  height: 40px; 
+  align-self: auto;
+ 
+  margin: 0px;
+  top: 50%;
+  flex: 0 1 auto; 
+}
+
+.flex-containerSeries{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-containerSeries > div{
+  width:100px;
+  line-height: 75px;
+  font-size: 30px; 
+  height: 40px; 
+  align-self: auto;
+ 
+  margin: 10px;
+  top: 50%;
+  flex: 0 1 auto; 
+}
+
+
+
 
 
