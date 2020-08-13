@@ -36,6 +36,7 @@ h2 {
 
 }
 a:any-link{color:snow;
+  text-decoration: none;
 }
 
 .flex-containerIndex{
@@ -88,7 +89,7 @@ a:any-link{color:snow;
 }
 
 .flex-containerPage > div{
-  margin-right: 50px;
+  margin-right: 45px;
   width:100px;
   text-align:center;
   line-height: 75px;
@@ -96,6 +97,7 @@ a:any-link{color:snow;
   right: 3vw;
   
 }
+
 .flex-containerAdd{
   display:flex;
   flex-direction: column;
@@ -142,6 +144,17 @@ a:any-link{color:snow;
 .flex-containerPage input{
   margin-top: 19%;
 }
+.flex-containerMyPage{
+  justify-content: space-between;
+  display:flex;
+  align-content: space-between;
+  
+}
+.flex-containerMyPage h2{
+  margin-right: 50px;
+  right: 3vw;
+}
+
 
 
 
