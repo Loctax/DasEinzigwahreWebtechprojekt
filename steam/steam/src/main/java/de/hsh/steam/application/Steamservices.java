@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import de.hsh.steam.persistence.SerializedSeriesRepository;
 
 public class Steamservices {
-	SerializedSeriesRepository repository = SerializedSeriesRepository.singleton();
+/*	SerializedSeriesRepository repository = SerializedSeriesRepository.singleton();
 
 	private static Steamservices exemplar = null;
 	public static Steamservices singleton() {
@@ -80,5 +80,5 @@ public class Steamservices {
 	private void readAllData() {
 		repository.readData();
 	}
-
+*/
 }

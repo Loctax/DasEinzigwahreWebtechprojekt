@@ -2,22 +2,31 @@ package de.hsh.steam.application;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Series implements Serializable{
 	
 	private static final long serialVersionUID = 1130974711328366348L;
 	
+        private long seriesId;
 	private String title;
 	private int numberOfSeasons;
 	private Genre genre;
 	private Streamingprovider streamedBy;
 	private ArrayList<User> seenBy = new ArrayList<User>();
-	
-	public Series(String title, int numberOfSeasons, Genre genre, Streamingprovider streamedBy) {
-		this.title = title;
+        
+        public Series(){
+            
+        }
+	public Series(long id, String title, int numberOfSeasons,Genre genre, Streamingprovider streamedBy ) {
+		this.seriesId = id;
+                this.title = title;
 		this.numberOfSeasons = numberOfSeasons;
-		this.genre = genre;
-		this.streamedBy = streamedBy;
+                this.genre = genre;
+                this.streamedBy = streamedBy;
+		
 	}
 
 	public void putOnWatchListOfUser(User u) {
@@ -37,7 +46,15 @@ public class Series implements Serializable{
 	public ArrayList<User> getSeenBy() {
 		return seenBy;
 	}
-	
+        @XmlElement
+        public long getId(){
+            return seriesId;
+        }
+        
+        public void setId(long id){
+            this.seriesId = id;
+        }
+	@XmlElement
 	public String getTitle() {
 		return title;
 	}
@@ -45,17 +62,17 @@ public class Series implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
+        @XmlElement
 	public Genre getGenre() {
 		return genre;
 	}
 
-
+        
 	public void setGenre(Genre myGenre) {
 		this.genre = myGenre;
 	}
 
-
+        @XmlElement
 	public int getNumberOfSeasons() {
 		return numberOfSeasons;
 	}
@@ -63,7 +80,7 @@ public class Series implements Serializable{
 	public void setNumberOfSeasons(int numberOfSeasons) {
 		this.numberOfSeasons = numberOfSeasons;
 	}
-	
+	@XmlElement
 	public Streamingprovider getStreamedBy() {
 		return streamedBy;
 	}

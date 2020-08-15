@@ -155,6 +155,32 @@ a:any-link{color:snow;
   right: 3vw;
 }
 
+.buttonsIndex {
+  background-color:aliceblue; 
+  border: none;
+  color: #4169e1;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.buttonsIndex {
+  background-color: #4169e1; 
+  color: aliceblue; 
+  border: 2px solid aliceblue;
+}
+
+.buttonsIndex:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
 
 
 

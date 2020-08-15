@@ -9,7 +9,7 @@ import de.hsh.steam.application.Streamingprovider;
 import de.hsh.steam.persistence.SerializedSeriesRepository;
 
 public class SteamTest {
-	
+/*	
 	public static void initData() {
 		Steamservices facade = Steamservices.singleton();
 		
@@ -81,4 +81,4 @@ public class SteamTest {
 		SerializedSeriesRepository repository = SerializedSeriesRepository.singleton();
 		repository.dumpRepository();
 	}
-}
+*/}

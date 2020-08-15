@@ -1,7 +1,10 @@
 package de.hsh.steam.application;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Rating implements Serializable{
 
 	private static final long serialVersionUID = -7806234457596021877L;
@@ -12,6 +15,9 @@ public class Rating implements Serializable{
 	private User ratingUser;
 	private Series ratedSeries;
 	
+        public Rating(){
+            
+        }
 	public Rating(Score score, String remark, User ratingUser, Series ratedSeries) {
 		super();
 		this.score = score;
@@ -19,7 +25,7 @@ public class Rating implements Serializable{
 		this.ratingUser = ratingUser;
 		this.ratedSeries = ratedSeries;
 	}
-
+        @XmlElement
 	public Score getScore() {
 		return score;
 	}
@@ -27,7 +33,7 @@ public class Rating implements Serializable{
 	public void setScore(Score score) {
 		this.score = score;
 	}
-
+        @XmlElement
 	public String getRemark() {
 		return remark;
 	}
@@ -35,7 +41,7 @@ public class Rating implements Serializable{
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-
+        @XmlElement
 	public User getRatingUser() {
 		return ratingUser;
 	}
@@ -43,7 +49,7 @@ public class Rating implements Serializable{
 	public void setRatingUser(User ofUser) {
 		this.ratingUser = ofUser;
 	}
-
+        @XmlElement
 	public Series getRatedSeries() {
 		return ratedSeries;
 	}
