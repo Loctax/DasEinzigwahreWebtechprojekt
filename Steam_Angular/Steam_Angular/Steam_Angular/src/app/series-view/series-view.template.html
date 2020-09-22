@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam </title>
+</head>
+<body>
+    <h1>Series-view</h1>
+    <span>
+    <table id="series-table">
+        <tr>
+            <th>Title</th>
+            <th>Seasons</th>
+            <th>Genre</th>
+            <th>Provider</th>
+        </tr>
+        <tr *ngFor="let series of seriesList">
+            <td>{{ series.title }}</td>
+            <td>{{ series.numberOfSeasons }}</td>
+            <td>{{ series.genre }}</td>
+            <td>{{ series.streamedBy }}</td>
+        </tr>
+    </table>
+</span>
+
+</body>
+</html>

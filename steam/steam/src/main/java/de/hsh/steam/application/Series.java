@@ -20,8 +20,7 @@ public class Series implements Serializable{
         public Series(){
             
         }
-	public Series(long id, String title, int numberOfSeasons,Genre genre, Streamingprovider streamedBy ) {
-		this.seriesId = id;
+	public Series(String title, int numberOfSeasons,Genre genre, Streamingprovider streamedBy ) {
                 this.title = title;
 		this.numberOfSeasons = numberOfSeasons;
                 this.genre = genre;

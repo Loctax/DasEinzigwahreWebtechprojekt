@@ -1,0 +1,6 @@
+ <xsd:element name="id" type="tns:xs:long"/>
+ <xsd:element name="password" type="tns:xs:string"/>
+ <xsd:complextype name="series" type="tns:series"/>
+ <xsd:element name="username" type="tns:xs:string"/>
+
+  

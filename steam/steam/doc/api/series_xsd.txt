@@ -1,0 +1,7 @@
+ <xsd:element name="genre" type="tns:xs:string"/>
+ <xsd:element name="id" type="tns:xs:long"/>
+ <xsd:element name="numerberOfSeasons" type="tns:xs:integer"/>
+ <xsd:element name="streamedBy" type="tns:xs:string"/>
+ <xsd:element name="title" type="tns:xs:string"/>
+
+  

@@ -1,0 +1,9 @@
+<body>
+<h1>Login</h1>
+<span>
+username<input type="string" [(ngModel)]="username" required>
+password<input type="string" [(ngModel)]="password" required>
+<button (click)="login()">login</button>
+<button (click)="register()">register</button>
+{{ getError() }} </span>
+</body>

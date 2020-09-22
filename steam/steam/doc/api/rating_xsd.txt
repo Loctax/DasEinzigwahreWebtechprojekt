@@ -1,0 +1,7 @@
+ <xsd:complextype name="series" type="tns:series"/>
+ <xsd:complextype name="user" type="tns:user"/>
+ <xsd:element name="remark" type="tns:xs:string"/>
+ <xsd:element ame="score" type="tns:string"/>
+
+
+  
