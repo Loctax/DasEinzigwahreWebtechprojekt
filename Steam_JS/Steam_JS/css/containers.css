@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: #eee;
+    overflow: hidden;
+    margin: 0px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidenavContainer {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+.mainContainer {
+    width: auto;
+    flex: 2 1 auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}

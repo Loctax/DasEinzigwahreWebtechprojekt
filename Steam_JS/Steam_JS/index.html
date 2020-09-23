@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam</title>
+    <link rel="stylesheet" href="./css/sidenav.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="css/containers.css">
+    <link rel="stylesheet" href="./css/popupForms.css">
+</head>
+<body onload="main()">
+    <div class="container">
+        <div class="sidenavContainer">
+        <!--    Sidebar -->
+            <div class="sidenav">
+                <span class="header">Steam</span>
+                <hr class="whiteHR">
+
+        <!--        Login Form -->
+                <button class="open-button" onclick="openForm('loginForm')" style="display: block" id="navLogin">Login</button>
+                <div class="form-popup" id="loginForm">
+                    <form class="form-container">
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+                        <button type="button" class="btn" onclick="closeForm('loginForm')">Close</button>
+                        <button type="button" class="btn" onclick="registerUser()">Register</button>
+                        <button type="submit" class="btn" id="loginButton">Login</button>
+                    </form>
+                </div>
+                <span class="navText" style="display: none" id="showUsername"></span>
+                <hr class="whiteHR">
+
+        <!--        Add Series Form -->
+                <button class="open-button" onclick="openForm('addSeriesForm')">Add Series</button>
+                <div class="form-popup" id="addSeriesForm">
+                    <form class="form-container">
+                        <label for="title">Title</label> <br>
+                        <input type="text" id="title" name="title" required> <br>
+
+                        <label for="numberOfSeasons">Number of Seasons</label> <br>
+                        <input type="number" id="numberOfSeasons" name="numberOfSeasons" required> <br>
+
+                        <label for="genre">Genre</label> <br>
+                        <select name="genre" id="genre">
+
+                            <option value="Thriller">Thriller</option>
+                            <option value="ScienceFiction">Science Fiction</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Documentary">Documentary</option>
+                        </select> <br>
+
+                        <label for="provider">Streaming Provider:</label> <br>
+                        <select name="provider" id="provider">
+                            <option value="Netflix">Netflix</option>
+                            <option value="AmazonPrime">Amazon Prime</option>
+                            <option value="Skye">Skye</option>
+                        </select> <br>
+
+                        <label for="score">Score: </label> <br>
+                        <select name="score" id="score">
+                            <option value="empty"></option>
+                            <option value="very_good">very good</option>
+                            <option value="good">good</option>
+                            <option value="mediocre">mediocre</option>
+                            <option value="bad">bad</option>
+                            <option value="very_bad">very bad</option>
+                        </select> <br>
+
+                        <label for="remark">Remark: </label> <br>
+                        <input type="text" id="remark" name="remark"> <br>
+
+                        <button type="button" class="btn cancel" onclick="closeForm('addSeriesForm')">Close</button>
+                        <button type="submit" class="btn">Add</button>
+                    </form>
+                </div>
+                <hr class="whiteHR">
+
+<!--        Search Form -->
+            <button class="open-button" onclick="openForm('searchForm')">Search</button>
+            <div class="form-popup" id="searchForm">
+                <form class="form-container">
+<!--                    <label for="userSearch">User</label> <br>-->
+<!--                    <input type="text" id="userSearch" name="user" value=""> <br>-->
+<!--                    <br>-->
+
+                    <label for="genreSearch">Genre</label> <br>
+                    <select name="genre" id="genreSearch">
+                        <option value=""></option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="ScienceFiction">Science Fiction</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Documentary">Documentary</option>
+                    </select> <br>
+
+                    <label for="providerSearch">Streaming Provider:</label> <br>
+                    <select name="provider" id="providerSearch">
+                        <option value=""></option>
+                        <option value="Netflix">Netflix</option>
+                        <option value="AmazonPrime">Amazon Prime</option>
+                        <option value="Skye">Skye</option>
+                    </select> <br>
+
+                    <label for="scoreSearch">Score: </label> <br>
+                    <select name="score" id="scoreSearch">
+                        <option value=""></option>
+                        <option value="very_good">Very good</option>
+                        <option value="good">good</option>
+                        <option value="mediocre">mediocre</option>
+                        <option value="bad">bad</option>
+                    </select> <br>
+
+                    <button type="button" class="btn cancel" onclick="closeForm('searchForm')">Close</button>
+                    <button type="submit" class="btn">Search</button>
+                    <button type="submit" class="btn">My Movies</button>
+                </form>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="mainContainer">
+        <!--Table list -->
+            <div class="tableContainer">
+                <table id="series-table">
+                    <thead>
+                        <th>Title</th>
+                        <th>Seasons</th>
+                        <th>Genre</th>
+                        <th>Provider</th>
+                        <th>SeenBy</th>
+                        <th>Score</th>
+                        <th>Remark</th>
+                        <th>Modify</th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!--Scripts -->
+    <script src="./js/saveToPersistence.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/toolBox.js"></script>
+    <script src="./js/checkUser.js"></script>
+    <script src="./js/showList.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/editList.js"></script>
+</body>
+</html>
